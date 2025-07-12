@@ -1,0 +1,1 @@
+console.log("Welcome to Pfahl Orchard and Berry Farm's website!");
