@@ -27,7 +27,7 @@ body {
     background: linear-gradient(135deg, #1e5631 0%, #2d7d3f 100%);
     display: flex;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 40px 20px 240px;
     color: white;
     height: 85px;
     position: relative;
@@ -48,8 +48,12 @@ body {
 
 .cornerstone {
     margin-right: 50px;
-    position: relative;
-    z-index: 10;
+    position: absolute;
+    left: 40px;
+    top: 25px;
+    z-index: 102;
+    display: flex;
+    align-items: center;
 }
 
 .cornerstone a {
@@ -59,16 +63,19 @@ body {
 }
 
 .cornerstone img {
-    height: 95px;
-    width: auto;
+    height: 118px;
+    width: 160px;
     border-radius: 20px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     border: 3px solid rgba(255,255,255,0.2);
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.15);
 }
 
 .cornerstone img:hover {
-    transform: translateY(-2px) scale(1.05);
+    transform: translateY(-2px) scale(1.2);
     box-shadow: 0 12px 35px rgba(0,0,0,0.2);
     border-color: rgba(255,255,255,0.3);
 }
@@ -221,7 +228,7 @@ body {
 
 .nav-bottom {
     background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
-    padding: 11px 40px;
+    padding: 11px 40px 11px 240px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -525,6 +532,7 @@ footer p {
     z-index: 10;
 }
 
+/* Styles used when screen less than 768 px (mobile) */
 @media (max-width: 768px) {
     main {
         padding: 0 10px;
@@ -542,8 +550,17 @@ footer p {
         margin-bottom: 0;
     }
     
+    .cornerstone {
+        position: relative;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        margin-bottom: 20px;
+    }
+    
     .cornerstone img {
-        height: 75px;
+        height: 90px;
+        width: 90px;
     }
     
     .main-nav {
