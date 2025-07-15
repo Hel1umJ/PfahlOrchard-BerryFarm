@@ -4,45 +4,350 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em;
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.nav-top {
+    background-color: #228B22; /* Forest Green - primary website color */
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    height: 100px;
-    margin-right: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
+    padding: 15px 20px;
     color: white;
+    height: 80px;
+}
+
+.cornerstone {
+    margin-right: 30px;
+}
+
+.cornerstone a {
+    display: block;
     text-decoration: none;
 }
 
+.cornerstone img {
+    height: 90px;
+    width: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cornerstone img:hover {
+    transform: scale(1.05);
+}
+
+.main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn, .nav-button {
+    background-color: transparent;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.dropbtn:hover, .nav-button:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.cart-container {
+    margin-left: auto;
+}
+
+.cart-button {
+    background-color: #FF6B35;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cart-button:hover {
+    background-color: #E55A2B;
+}
+
+.nav-bottom {
+    background-color: #4169E1; /* Royal Blue - secondary color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-info span, .contact-info a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #FFD700;
+}
+
+.contact-info img {
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+}
+
 main {
-    padding: 20px;
+    margin-top: 20px;
+}
+
+.page-content {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.page-content h1 {
+    color: #228B22;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.page-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides.active {
+    display: block;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px 20px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 5px;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    transform: scale(1.1);
+}
+
+.slideshow-dots {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #228B22;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.farm-details {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.farm-details h2 {
+    color: #228B22;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.farm-details p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.farm-details b {
+    color: #228B22;
+    font-weight: 600;
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    padding: 20px;
     width: 100%;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .nav-top {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+    
+    .cornerstone {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .cart-container {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-bottom {
+        padding: 15px 20px;
+        height: auto;
+    }
+    
+    .farm-details {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+    
+    .farm-details h2 {
+        font-size: 2em;
+    }
+    
+    .farm-details p {
+        font-size: 1.1em;
+    }
 }

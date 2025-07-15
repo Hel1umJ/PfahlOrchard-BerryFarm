@@ -3,29 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Pfahl Orchard and Berry Farm</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <header>
-        <img src="../assets/images/farm_logo.png" alt="Pfahl Orchard and Berry Farm Logo" class="logo">
-        <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <nav class="nav-container">
+            <div class="nav-top">
+                <div class="cornerstone">
+                    <a href="../index.html">
+                        <img src="../assets/images/farm_logo.png" alt="Pfahl Orchard & Berry Farm">
+                    </a>
+                </div>
+                <div class="main-nav">
+                    <div class="dropdown">
+                        <button class="dropbtn">About ▼</button>
+                        <div class="dropdown-content">
+                            <a href="about.html">About Us</a>
+                            <a href="varieties.html">Our Varieties & Ripening Dates</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Shop ▼</button>
+                        <div class="dropdown-content">
+                            <a href="pickup.html">Pickup Orders</a>
+                            <a href="bulk.html">Bulk Ordering</a>
+                        </div>
+                    </div>
+                    <button class="nav-button" onclick="location.href='pick-your-own.html'">Pick Your Own</button>
+                </div>
+                <div class="cart-container">
+                    <button class="cart-button">🛒 $0.00</button>
+                </div>
+            </div>
+            <div class="nav-bottom">
+                <div class="contact-info">
+                    <span>📞 (330) 696-7127</span>
+                    <a href="#" target="_blank">
+                        <img src="../assets/images/icon-facebook.webp" alt="Facebook">
+                        Facebook
+                    </a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
         </nav>
     </header>
-
     <main>
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="page-content">
+            <h1>Contact Us</h1>
+            <p>Contact information will go here.</p>
+        </div>
     </main>
-
     <footer>
         <p>&copy; 2025 Pfahl Orchard and Berry Farm</p>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

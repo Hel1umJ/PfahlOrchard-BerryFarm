@@ -8,25 +8,76 @@
 </head>
 <body>
     <header>
-        <img src="assets/images/farm_logo.png" alt="Pfahl Orchard and Berry Farm Logo" class="logo">
-        <h1>Pfahl Orchard & Berry Farm</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About Us</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
+        <nav class="nav-container">
+            <div class="nav-top">
+                <div class="cornerstone">
+                    <a href="index.html">
+                        <img src="assets/images/farm_logo.png" alt="Pfahl Orchard & Berry Farm">
+                    </a>
+                </div>
+                <div class="main-nav">
+                    <div class="dropdown">
+                        <button class="dropbtn">About ▼</button>
+                        <div class="dropdown-content">
+                            <a href="pages/about.html">About Us</a>
+                            <a href="pages/varieties.html">Our Varieties & Ripening Dates</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Shop ▼</button>
+                        <div class="dropdown-content">
+                            <a href="pages/pickup.html">Pickup Orders</a>
+                            <a href="pages/bulk.html">Bulk Ordering</a>
+                        </div>
+                    </div>
+                    <button class="nav-button" onclick="location.href='pages/pick-your-own.html'">Pick Your Own</button>
+                </div>
+                <div class="cart-container">
+                    <button class="cart-button">🛒 $0.00</button>
+                </div>
+            </div>
+            <div class="nav-bottom">
+                <div class="contact-info">
+                    <span>📞 (330) 696-7127</span>
+                    <a href="#" target="_blank">
+                        <img src="assets/images/icon-facebook.webp" alt="Facebook">
+                        Facebook
+                    </a>
+                    <a href="pages/contact.html">Contact Us</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="slideshow-container">
+            <div class="mySlides fade active">
+                <img src="assets/images/farm_logo.png" alt="Pfahl Orchard & Berry Farm">
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/images/farm_logo.png" alt="Pfahl Orchard & Berry Farm">
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/images/farm_logo.png" alt="Pfahl Orchard & Berry Farm">
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+        <div class="slideshow-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <section class="farm-details">
+            <h2>Our Farm</h2>
+            <p><b>Address:</b> 7604 Beach Rd, Wadsworth, OH</p>
+            <p><b>What we grow:</b> Apples, Blueberries, Strawberries, Blackberries</p>
+            <p>We offer pick-your-own for many of our fruits, and we also sell and deliver bulk orders locally.</p>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Pfahl Orchard and Berry Farm</p>
-    </footer>
+    <footer></footer>
 
     <script src="js/main.js"></script>
 </body>
