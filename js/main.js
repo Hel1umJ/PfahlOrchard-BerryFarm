@@ -33,6 +33,79 @@ document.addEventListener("DOMContentLoaded", function() {
     const isPagesDir = window.location.pathname.includes('/pages/');
     const prefix = isPagesDir ? '../' : '';
 
+    // Function to initialize dropdown menus with horizontal-exit behavior
+    function initDropdowns() {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const dropdownContent = dropdown.querySelector('.dropdown-content');
+            const dropdownButton = dropdown.querySelector('.dropbtn');
+            let showTimeout;
+            let hideTimeout;
+            let isMenuOpen = false;
+            
+            // Show dropdown on button hover
+            dropdownButton.addEventListener('mouseenter', function() {
+                clearTimeout(hideTimeout);
+                showTimeout = setTimeout(() => {
+                    dropdownContent.classList.add('show');
+                    isMenuOpen = true;
+                }, 150);
+            });
+            
+            
+            // Handle mouse leave from dropdown container
+            dropdown.addEventListener('mouseleave', function(e) {
+                if (!isMenuOpen) return;
+                
+                clearTimeout(showTimeout);
+                
+                // Get dropdown boundaries
+                const rect = dropdown.getBoundingClientRect();
+                const contentRect = dropdownContent.getBoundingClientRect();
+                
+                // Check if mouse is leaving horizontally (left or right)
+                const isLeavingHorizontally = 
+                    e.clientX < Math.min(rect.left, contentRect.left) || 
+                    e.clientX > Math.max(rect.right, contentRect.right);
+                
+                if (isLeavingHorizontally) {
+                    // Hide immediately when leaving horizontally
+                    dropdownContent.classList.remove('show');
+                    isMenuOpen = false;
+                } else {
+                    // Small delay for vertical movement (more forgiving)
+                    hideTimeout = setTimeout(() => {
+                        dropdownContent.classList.remove('show');
+                        isMenuOpen = false;
+                    }, 200);
+                }
+            });
+            
+            // Keep menu open when hovering over dropdown content
+            dropdownContent.addEventListener('mouseenter', function() {
+                clearTimeout(hideTimeout);
+            });
+            
+            // Handle leaving dropdown content
+            dropdownContent.addEventListener('mouseleave', function(e) {
+                const rect = dropdownContent.getBoundingClientRect();
+                const isLeavingHorizontally = 
+                    e.clientX < rect.left || e.clientX > rect.right;
+                
+                if (isLeavingHorizontally) {
+                    dropdownContent.classList.remove('show');
+                    isMenuOpen = false;
+                } else {
+                    hideTimeout = setTimeout(() => {
+                        dropdownContent.classList.remove('show');
+                        isMenuOpen = false;
+                    }, 200);
+                }
+            });
+        });
+    }
+
     // Function to initialize the slideshow
     function initSlideshow() {
         showSlides(slideIndex);
@@ -78,6 +151,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         img.setAttribute('src', `${prefix}${src}`);
                     }
                 });
+                
+                // Initialize dropdowns after header is loaded
+                initDropdowns();
             }
         })
         .catch(error => {
@@ -104,4 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initialize the slideshow after a short delay to ensure the DOM is updated
     setTimeout(initSlideshow, 100);
+    
+    // Also initialize dropdowns for pages that already have header content
+    setTimeout(initDropdowns, 100);
 });
