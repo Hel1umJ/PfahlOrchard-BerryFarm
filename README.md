@@ -9,11 +9,13 @@ Produce & Ripening dates:
 
     Apples: 
 
-    Blueberries: We have over 1200 blueberry bushes and counting. We have a relatively even split of Elliot, Duke, and Bluecrop berries.
+    Blueberries: We have over 1200 blueberry bushes and counting across 3 acres with a relatively even split of Elliot, Duke, and Bluecrop berries.
 
-    Strawberries: We are still planting! (Upcoming Junebearing and Everbearing plots)
+    Blackberries: We are still planting! (Planned variety: Chester)
 
-    Blackberries: We are still planting! (Upcoming Chester)
+    Strawberries: We are still planting! (Plots of Junebearing and Everbearing upcoming)
+
+    
 
 
 
