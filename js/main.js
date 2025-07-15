@@ -125,62 +125,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Fetch and load header
-    fetch(`${prefix}header.html`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to load header: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            const header = document.querySelector("header");
-            if (header) {
-                header.innerHTML = data;
-
-                // Adjust paths for links and images in the header
-                header.querySelectorAll('a').forEach(link => {
-                    const href = link.getAttribute('href');
-                    if (href && !href.startsWith('#') && !href.startsWith('http')) {
-                        link.setAttribute('href', `${prefix}${href}`);
-                    }
-                });
-                header.querySelectorAll('img').forEach(img => {
-                    const src = img.getAttribute('src');
-                    if (src && !src.startsWith('http')) {
-                        img.setAttribute('src', `${prefix}${src}`);
-                    }
-                });
-                
-                // Initialize dropdowns after header is loaded
-                initDropdowns();
-            }
-        })
-        .catch(error => {
-            console.error('Error loading header:', error);
-        });
-
-    // Fetch and load footer
-    fetch(`${prefix}footer.html`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to load footer: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            const footer = document.querySelector("footer");
-            if (footer) {
-                footer.innerHTML = data;
-            }
-        })
-        .catch(error => {
-            console.error('Error loading footer:', error);
-        });
+    // Initialize dropdowns for static header content
+    initDropdowns();
 
     // Initialize the slideshow after a short delay to ensure the DOM is updated
     setTimeout(initSlideshow, 100);
-    
-    // Also initialize dropdowns for pages that already have header content
-    setTimeout(initDropdowns, 100);
 });
