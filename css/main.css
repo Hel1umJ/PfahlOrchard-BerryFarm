@@ -27,9 +27,9 @@ body {
     background: linear-gradient(135deg, #1e5631 0%, #2d7d3f 100%);
     display: flex;
     align-items: center;
-    padding: 20px 40px 20px 240px;
+    padding: 15px 40px 15px 240px;
     color: white;
-    height: 85px;
+    height: 65px;
     position: relative;
     overflow: visible;
     z-index: 101;
@@ -50,7 +50,7 @@ body {
     margin-right: 50px;
     position: absolute;
     left: 40px;
-    top: 25px;
+    top: 20px;
     z-index: 102;
     display: flex;
     align-items: center;
@@ -63,19 +63,18 @@ body {
 }
 
 .cornerstone img {
-    height: 118px;
-    width: 160px;
+    height: 110px;
+    width: 183px;
     border-radius: 20px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     border: 3px solid rgba(255,255,255,0.2);
-    object-fit: cover;
-    object-position: center;
-    transform: scale(1.15);
+    object-fit: contain;
+    object-position: center center;
 }
 
 .cornerstone img:hover {
-    transform: translateY(-2px) scale(1.2);
+    transform: translateY(-2px) scale(1.05);
     box-shadow: 0 12px 35px rgba(0,0,0,0.2);
     border-color: rgba(255,255,255,0.3);
 }
