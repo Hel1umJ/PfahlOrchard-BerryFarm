@@ -130,4 +130,57 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initialize the slideshow after a short delay to ensure the DOM is updated
     setTimeout(initSlideshow, 100);
+    
+    // Initialize cart functionality
+    initCart();
 });
+
+// Cart functionality
+function initCart() {
+    let cartCount = 0;
+    
+    // Update cart quantity display
+    function updateCartDisplay() {
+        const cartQuantity = document.getElementById('cart-quantity');
+        if (cartQuantity) {
+            cartQuantity.textContent = cartCount;
+            cartQuantity.style.display = 'block';
+        }
+    }
+    
+    // Add to cart function (can be called from product pages)
+    window.addToCart = function(quantity = 1) {
+        cartCount += quantity;
+        updateCartDisplay();
+        
+        // Store cart count in localStorage
+        localStorage.setItem('cartCount', cartCount);
+    };
+    
+    // Remove from cart function
+    window.removeFromCart = function(quantity = 1) {
+        cartCount = Math.max(0, cartCount - quantity);
+        updateCartDisplay();
+        
+        // Store cart count in localStorage
+        localStorage.setItem('cartCount', cartCount);
+    };
+    
+    // Clear cart function
+    window.clearCart = function() {
+        cartCount = 0;
+        updateCartDisplay();
+        
+        // Clear cart count from localStorage
+        localStorage.removeItem('cartCount');
+    };
+    
+    // Load cart count from localStorage
+    const savedCartCount = localStorage.getItem('cartCount');
+    if (savedCartCount) {
+        cartCount = parseInt(savedCartCount, 10);
+    }
+    
+    // Initial display update
+    updateCartDisplay();
+}
