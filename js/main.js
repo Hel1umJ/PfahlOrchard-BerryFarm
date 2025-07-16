@@ -146,6 +146,9 @@ document.addEventListener("DOMContentLoaded", function() {
         dots.forEach((dot, index) => {
             dot.onclick = () => currentSlide(index + 1);
         });
+
+        // Auto advance slides every 5 seconds
+        setInterval(() => changeSlide(1), 5000);
     }
 
     // Initialize dropdowns for static header content

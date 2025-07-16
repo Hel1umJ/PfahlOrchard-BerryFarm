@@ -486,6 +486,55 @@ main {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     border: 1px solid rgba(255,255,255,0.8);
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.35);
+    pointer-events: none;
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin: 0 0 10px;
+    letter-spacing: 1px;
+}
+
+.hero-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.hero-overlay .cta-button {
+    pointer-events: auto;
+    background: linear-gradient(135deg, #4a7c59 0%, #2d7d3f 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-overlay .cta-button:hover {
+    background: linear-gradient(135deg, #2d7d3f 0%, #1e5631 100%);
+    transform: translateY(-2px);
 }
 
 .mySlides {
