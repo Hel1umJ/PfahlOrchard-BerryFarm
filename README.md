@@ -108,9 +108,12 @@ Index summary:
 
     Our web store is where you can place online and pickup orders (with an option for bulk orders & local delivery)
 
+    Roadside Stand 
+        Our roadside stand is regularly stocked with some of our pickup-only non-produce items like our dried BSF larvae, bags of compost, and animal feed. Just stop by and use our self checkout. 
+
     We don't just grow berries here! We also have a variety of plant starters (sweet potato, strawberry, blueberry) as well as garden and livestock products available at our store page. Just submit a pickup order.
 
-    Our roadside stand is pre-stocked with a lot of things already. Just come by and place an order. 
+    
 
 
 
