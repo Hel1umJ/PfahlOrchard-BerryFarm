@@ -56,7 +56,7 @@ Meet The Farmers:
     We are entirely a 2 man operation!
 
     Brendan Pfahl. 
-        The in-house software engineer and creator of this website. I graduated from OSU in 2025 and enjoy all things tech. I make little automation trinkets that we use around the farm - ranging from indoor greenhouse systems that we use for all our plant starters to the automatic door on our chicken coop. When I'm not working out on the farm or have my nose buried in VScode, I am cutting my teeth as a software engineer at Honda - developing new technologies for a better future. 
+        The in-house software engineer and creator of this website. I graduated from OSU in 2025 and enjoy all things tech. I make little automation trinkets that we use around the farm - ranging from indoor greenhouse systems that we use for all our plant starters to the automatic door on our chicken coop. I also build and fly my own FPV drones, some videos of which I upload on my youtube channel. When I'm not working out on the farm or have my nose buried in VScode, I am cutting my teeth as a software engineer at Honda - developing new technologies for a better future. 
 
 
     Doug Pfahl
@@ -101,6 +101,18 @@ Contact Us:
 
 Cart:
     Checkout page (needs created)
+
+
+Index summary:
+    We offer pick-your-own for many of our fruits, check out the Pick Your Own Page (insert hyperlink) to find out more. 
+
+    Our web store is where you can place online and pickup orders (with an option for bulk orders & local delivery)
+
+    We don't just grow berries here! We also have a variety of plant starters (sweet potato, strawberry, blueberry) as well as garden and livestock products available at our store page. Just submit a pickup order.
+
+    Our roadside stand is pre-stocked with a lot of things already. Just come by and place an order. 
+
+
 
 
 
