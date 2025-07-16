@@ -73,6 +73,8 @@ Online Ordering & Pickup:
             -Blackberries (0.75lb)
             -Strawberries (2lb)
 
+            -Cider: 1 gal - $5; 1/2 Gal - $3 
+
         -Frozen Produce:
             -Blueberries 
             -Blackberries 

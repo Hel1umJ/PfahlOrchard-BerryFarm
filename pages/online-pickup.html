@@ -63,57 +63,67 @@
                 <h2>Fresh Produce (Pickup Only)</h2>
                 <div class="product-grid">
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Fresh Blueberries" class="product-image">
                         <h3>Blueberries</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">1 lb</span>
-                                <span class="option-price">$4.50</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Fresh, juicy blueberries perfect for snacking</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="blueberries-1lb" name="blueberries-qty" value="1lb-4.50" checked>
+                                <label for="blueberries-1lb">1 lb</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">2 lb</span>
-                                <span class="option-price">$9.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="blueberries-2lb" name="blueberries-qty" value="2lb-9.00">
+                                <label for="blueberries-2lb">2 lb</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">5 lb</span>
-                                <span class="option-price">$22.50</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="blueberries-5lb" name="blueberries-qty" value="5lb-22.50">
+                                <label for="blueberries-5lb">5 lb</label>
                             </div>
                         </div>
+                        <div class="price-display" id="blueberries-price">$4.50</div>
+                        <button class="add-to-cart" onclick="addToCart('blueberries')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Fresh Apples" class="product-image">
                         <h3>Apples</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">3 lb</span>
-                                <span class="option-price">$4.50</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Crisp apples, perfect for eating fresh</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="apples-3lb" name="apples-qty" value="3lb-4.50" checked>
+                                <label for="apples-3lb">3 lb</label>
                             </div>
                         </div>
+                        <div class="price-display" id="apples-price">$4.50</div>
+                        <button class="add-to-cart" onclick="addToCart('apples')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Fresh Blackberries" class="product-image">
                         <h3>Blackberries</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">0.75 lb</span>
-                                <span class="option-price">$4.13</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Sweet, dark blackberries full of flavor</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="blackberries-075lb" name="blackberries-qty" value="0.75lb-4.13" checked>
+                                <label for="blackberries-075lb">0.75 lb</label>
                             </div>
                         </div>
+                        <div class="price-display" id="blackberries-price">$4.13</div>
+                        <button class="add-to-cart" onclick="addToCart('blackberries')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Fresh Strawberries" class="product-image">
                         <h3>Strawberries</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">2 lb</span>
-                                <span class="option-price">$7.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Bright red, juicy strawberries</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="strawberries-2lb" name="strawberries-qty" value="2lb-7.00" checked>
+                                <label for="strawberries-2lb">2 lb</label>
                             </div>
                         </div>
+                        <div class="price-display" id="strawberries-price">$7.00</div>
+                        <button class="add-to-cart" onclick="addToCart('strawberries')">Add to Cart</button>
                     </div>
                 </div>
             </section>
@@ -122,36 +132,45 @@
                 <h2>Frozen Produce</h2>
                 <div class="product-grid">
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Frozen Blueberries" class="product-image">
                         <h3>Frozen Blueberries</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">1 lb</span>
-                                <span class="option-price">$4.50</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Farm-fresh blueberries, frozen at peak ripeness</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="frozen-blueberries-1lb" name="frozen-blueberries-qty" value="1lb-4.50" checked>
+                                <label for="frozen-blueberries-1lb">1 lb</label>
                             </div>
                         </div>
+                        <div class="price-display" id="frozen-blueberries-price">$4.50</div>
+                        <button class="add-to-cart" onclick="addToCart('frozen-blueberries')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Frozen Blackberries" class="product-image">
                         <h3>Frozen Blackberries</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">1 lb</span>
-                                <span class="option-price">$5.50</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Sweet frozen blackberries, perfect for smoothies</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="frozen-blackberries-1lb" name="frozen-blackberries-qty" value="1lb-5.50" checked>
+                                <label for="frozen-blackberries-1lb">1 lb</label>
                             </div>
                         </div>
+                        <div class="price-display" id="frozen-blackberries-price">$5.50</div>
+                        <button class="add-to-cart" onclick="addToCart('frozen-blackberries')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Frozen Strawberries" class="product-image">
                         <h3>Frozen Strawberries</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">1 lb</span>
-                                <span class="option-price">$3.50</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Farm-fresh strawberries, frozen for year-round enjoyment</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="frozen-strawberries-1lb" name="frozen-strawberries-qty" value="1lb-3.50" checked>
+                                <label for="frozen-strawberries-1lb">1 lb</label>
                             </div>
                         </div>
+                        <div class="price-display" id="frozen-strawberries-price">$3.50</div>
+                        <button class="add-to-cart" onclick="addToCart('frozen-strawberries')">Add to Cart</button>
                     </div>
                 </div>
             </section>
@@ -160,36 +179,45 @@
                 <h2>Honey</h2>
                 <div class="product-grid">
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Clover Honey" class="product-image">
                         <h3>Clover Honey</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">1 lb jar</span>
-                                <span class="option-price">$8.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Pure, golden clover honey from our hives</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="clover-honey-1lb" name="clover-honey-qty" value="1lb-8.00" checked>
+                                <label for="clover-honey-1lb">1 lb jar</label>
                             </div>
                         </div>
+                        <div class="price-display" id="clover-honey-price">$8.00</div>
+                        <button class="add-to-cart" onclick="addToCart('clover-honey')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Apple Blossom Honey" class="product-image">
                         <h3>Apple Blossom Honey</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">1 lb jar</span>
-                                <span class="option-price">$8.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Light, floral honey from apple blossoms</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="apple-honey-1lb" name="apple-honey-qty" value="1lb-8.00" checked>
+                                <label for="apple-honey-1lb">1 lb jar</label>
                             </div>
                         </div>
+                        <div class="price-display" id="apple-honey-price">$8.00</div>
+                        <button class="add-to-cart" onclick="addToCart('apple-honey')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Blueberry Blossom Honey" class="product-image">
                         <h3>Blueberry Blossom Honey</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">1 lb jar</span>
-                                <span class="option-price">$8.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Rich, fruity honey from blueberry blossoms</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="blueberry-honey-1lb" name="blueberry-honey-qty" value="1lb-8.00" checked>
+                                <label for="blueberry-honey-1lb">1 lb jar</label>
                             </div>
                         </div>
+                        <div class="price-display" id="blueberry-honey-price">$8.00</div>
+                        <button class="add-to-cart" onclick="addToCart('blueberry-honey')">Add to Cart</button>
                     </div>
                 </div>
             </section>
@@ -198,61 +226,65 @@
                 <h2>Plant Starters</h2>
                 <div class="product-grid">
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Strawberry Plants" class="product-image">
                         <h3>Strawberry Starters</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">Junebearing (10 plants)</span>
-                                <span class="option-price">$15.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Healthy strawberry plants, 10 per order</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="strawberry-junebearing" name="strawberry-starters-qty" value="junebearing-15.00" checked>
+                                <label for="strawberry-junebearing">Junebearing</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">Everbearing (10 plants)</span>
-                                <span class="option-price">$15.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="strawberry-everbearing" name="strawberry-starters-qty" value="everbearing-15.00">
+                                <label for="strawberry-everbearing">Everbearing</label>
                             </div>
                         </div>
+                        <div class="price-display" id="strawberry-starters-price">$15.00</div>
+                        <button class="add-to-cart" onclick="addToCart('strawberry-starters')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Blueberry Plants" class="product-image">
                         <h3>Blueberry Starters</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">Bluecrop (1 plant)</span>
-                                <span class="option-price">$12.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Young blueberry bushes, 1 per order</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="blueberry-bluecrop" name="blueberry-starters-qty" value="bluecrop-12.00" checked>
+                                <label for="blueberry-bluecrop">Bluecrop</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">Elliot (1 plant)</span>
-                                <span class="option-price">$12.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="blueberry-elliot" name="blueberry-starters-qty" value="elliot-12.00">
+                                <label for="blueberry-elliot">Elliot</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">Duke (1 plant)</span>
-                                <span class="option-price">$12.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="blueberry-duke" name="blueberry-starters-qty" value="duke-12.00">
+                                <label for="blueberry-duke">Duke</label>
                             </div>
                         </div>
+                        <div class="price-display" id="blueberry-starters-price">$12.00</div>
+                        <button class="add-to-cart" onclick="addToCart('blueberry-starters')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Sweet Potato Slips" class="product-image">
                         <h3>Sweet Potato Starters</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">Kejora (10 slips)</span>
-                                <span class="option-price">$10.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Fresh sweet potato slips, 10 per order</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="sweet-potato-kejora" name="sweet-potato-starters-qty" value="kejora-10.00" checked>
+                                <label for="sweet-potato-kejora">Kejora</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">Stokes (10 slips)</span>
-                                <span class="option-price">$10.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="sweet-potato-stokes" name="sweet-potato-starters-qty" value="stokes-10.00">
+                                <label for="sweet-potato-stokes">Stokes</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">Beauregard (10 slips)</span>
-                                <span class="option-price">$10.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="sweet-potato-beauregard" name="sweet-potato-starters-qty" value="beauregard-10.00">
+                                <label for="sweet-potato-beauregard">Beauregard</label>
                             </div>
                         </div>
+                        <div class="price-display" id="sweet-potato-starters-price">$10.00</div>
+                        <button class="add-to-cart" onclick="addToCart('sweet-potato-starters')">Add to Cart</button>
                     </div>
                 </div>
             </section>
@@ -261,63 +293,71 @@
                 <h2>Animal Products</h2>
                 <div class="product-grid">
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="BSF Larvae" class="product-image">
                         <h3>BSF Larvae (Live)</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">500 count</span>
-                                <span class="option-price">$15.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Live black soldier fly larvae for animal feed</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="bsf-live-500" name="bsf-live-qty" value="500-15.00" checked>
+                                <label for="bsf-live-500">500 count</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">1000 count</span>
-                                <span class="option-price">$25.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="bsf-live-1000" name="bsf-live-qty" value="1000-25.00">
+                                <label for="bsf-live-1000">1000 count</label>
                             </div>
                         </div>
+                        <div class="price-display" id="bsf-live-price">$15.00</div>
+                        <button class="add-to-cart" onclick="addToCart('bsf-live')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Dried BSF Larvae" class="product-image">
                         <h3>BSF Larvae (Dried)</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">2 lb</span>
-                                <span class="option-price">$18.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Dried black soldier fly larvae, high protein feed</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="bsf-dried-2lb" name="bsf-dried-qty" value="2lb-18.00" checked>
+                                <label for="bsf-dried-2lb">2 lb</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">5 lb</span>
-                                <span class="option-price">$40.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="bsf-dried-5lb" name="bsf-dried-qty" value="5lb-40.00">
+                                <label for="bsf-dried-5lb">5 lb</label>
                             </div>
-                            <div class="product-option">
-                                <span class="option-size">10 lb</span>
-                                <span class="option-price">$75.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                            <div class="quantity-option">
+                                <input type="radio" id="bsf-dried-10lb" name="bsf-dried-qty" value="10lb-75.00">
+                                <label for="bsf-dried-10lb">10 lb</label>
                             </div>
                         </div>
+                        <div class="price-display" id="bsf-dried-price">$18.00</div>
+                        <button class="add-to-cart" onclick="addToCart('bsf-dried')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Animal Feed" class="product-image">
                         <h3>Home Grown Animal Feed</h3>
-                        <p class="product-description">30% apple pomace, 30% dry duckweed, 30% BSF larvae</p>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">25 lb bag</span>
-                                <span class="option-price">$35.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Blend of pomace, duckweed, and BSF larvae</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="animal-feed-25lb" name="animal-feed-qty" value="25lb-35.00" checked>
+                                <label for="animal-feed-25lb">25 lb bag</label>
                             </div>
                         </div>
+                        <div class="price-display" id="animal-feed-price">$35.00</div>
+                        <button class="add-to-cart" onclick="addToCart('animal-feed')">Add to Cart</button>
                     </div>
                     
                     <div class="product-card">
+                        <img src="../assets/images/farm_logo.png" alt="Compost" class="product-image">
                         <h3>Organic Compost Fertilizer</h3>
-                        <div class="product-options">
-                            <div class="product-option">
-                                <span class="option-size">25 lb bag</span>
-                                <span class="option-price">$20.00</span>
-                                <button class="add-to-cart">Add to Cart</button>
+                        <p class="product-description">Rich, organic compost for healthy plants</p>
+                        <div class="quantity-selector">
+                            <div class="quantity-option">
+                                <input type="radio" id="compost-25lb" name="compost-qty" value="25lb-20.00" checked>
+                                <label for="compost-25lb">25 lb bag</label>
                             </div>
                         </div>
+                        <div class="price-display" id="compost-price">$20.00</div>
+                        <button class="add-to-cart" onclick="addToCart('compost')">Add to Cart</button>
                     </div>
                 </div>
             </section>

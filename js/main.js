@@ -133,6 +133,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Initialize cart functionality
     initCart();
+    
+    // Initialize shop functionality
+    initShop();
 });
 
 // Cart functionality
@@ -184,3 +187,80 @@ function initCart() {
     // Initial display update
     updateCartDisplay();
 }
+
+// Shop functionality
+function initShop() {
+    // Initialize quantity selectors
+    const quantitySelectors = document.querySelectorAll('.quantity-selector');
+    
+    quantitySelectors.forEach(selector => {
+        const radioButtons = selector.querySelectorAll('input[type="radio"]');
+        
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.checked) {
+                    updatePriceDisplay(this.name, this.value);
+                }
+            });
+        });
+    });
+    
+    // Initialize price displays
+    updateAllPrices();
+}
+
+// Update price display for a specific product
+function updatePriceDisplay(productName, value) {
+    const [size, price] = value.split('-');
+    const priceDisplay = document.getElementById(productName.replace('-qty', '-price'));
+    
+    if (priceDisplay) {
+        priceDisplay.textContent = `$${price}`;
+    }
+}
+
+// Update all price displays on page load
+function updateAllPrices() {
+    const quantitySelectors = document.querySelectorAll('.quantity-selector');
+    
+    quantitySelectors.forEach(selector => {
+        const checkedRadio = selector.querySelector('input[type="radio"]:checked');
+        if (checkedRadio) {
+            updatePriceDisplay(checkedRadio.name, checkedRadio.value);
+        }
+    });
+}
+
+// Enhanced addToCart function for shop items
+window.addToCart = function(productId) {
+    const quantitySelector = document.querySelector(`input[name="${productId}-qty"]:checked`);
+    
+    if (quantitySelector) {
+        const [size, price] = quantitySelector.value.split('-');
+        const productName = productId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        
+        // Add to cart logic here
+        console.log(`Added to cart: ${productName} - ${size} for $${price}`);
+        
+        // Update cart count
+        const cartCount = parseInt(localStorage.getItem('cartCount') || '0') + 1;
+        localStorage.setItem('cartCount', cartCount);
+        
+        // Update cart display
+        const cartQuantity = document.getElementById('cart-quantity');
+        if (cartQuantity) {
+            cartQuantity.textContent = cartCount;
+        }
+        
+        // Visual feedback
+        const button = event.target;
+        const originalText = button.textContent;
+        button.textContent = 'Added!';
+        button.style.background = '#28a745';
+        
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = '';
+        }, 1000);
+    }
+};
