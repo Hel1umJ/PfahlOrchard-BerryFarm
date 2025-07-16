@@ -622,9 +622,9 @@ footer p {
     }
     
     .nav-top {
-        flex-direction: row;
-        padding: 4px 15px;
-        height: 38px;
+        flex-direction: column;
+        padding: 4px 15px 12px 15px;
+        height: auto;
         gap: 8px;
     }
     
@@ -635,6 +635,7 @@ footer p {
         margin: 0;
         align-self: center;
         flex-shrink: 0;
+        order: 1;
     }
     
     .cornerstone img {
@@ -649,6 +650,7 @@ footer p {
         width: auto;
         flex: 1;
         overflow-x: auto;
+        order: 2;
     }
     
     .dropbtn, .nav-button {
@@ -664,6 +666,9 @@ footer p {
         align-self: center;
         flex-shrink: 0;
         gap: 8px;
+        flex-direction: column;
+        align-items: center;
+        order: 3;
     }
     
     .shop-button {
