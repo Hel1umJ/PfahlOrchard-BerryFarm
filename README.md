@@ -88,7 +88,7 @@ Online Ordering & Pickup:
             -Blueberry Starters (Bluecrop, Elliot, Duke)
             -Sweet Potato Starters (Kejora, Stokes, Beauregard)
 
-        -Animal Products:
+        -Garden & Livestock:
             -BSF Larvae (Live) (500, 1000)
             -BSF Larvae (Dry) (2lb, 5lb, 10lb)
             -Home Grown Animal feed (30% apple pomace, 30% dry duckweed, 30% BSF larvae) (25lb bag)
