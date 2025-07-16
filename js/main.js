@@ -52,6 +52,19 @@ document.addEventListener("DOMContentLoaded", function() {
                     isMenuOpen = true;
                 }, 150);
             });
+
+            // Toggle dropdown on click (for mobile devices)
+            dropdownButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                    isMenuOpen = false;
+                } else {
+                    dropdownContent.classList.add('show');
+                    isMenuOpen = true;
+                }
+            });
             
             
             // Handle mouse leave from dropdown container
@@ -90,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Handle leaving dropdown content
             dropdownContent.addEventListener('mouseleave', function(e) {
                 const rect = dropdownContent.getBoundingClientRect();
-                const isLeavingHorizontally = 
+                const isLeavingHorizontally =
                     e.clientX < rect.left || e.clientX > rect.right;
                 
                 if (isLeavingHorizontally) {
@@ -101,6 +114,16 @@ document.addEventListener("DOMContentLoaded", function() {
                         dropdownContent.classList.remove('show');
                         isMenuOpen = false;
                     }, 200);
+                }
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            dropdowns.forEach(dd => {
+                if (!dd.contains(e.target)) {
+                    const content = dd.querySelector('.dropdown-content');
+                    content.classList.remove('show');
                 }
             });
         });
