@@ -890,8 +890,8 @@ footer p {
     }
     
     .cornerstone img {
-        height: 30px;
-        width: 50px;
+        height: 45px;
+        width: 75px;
     }
     
     .main-nav {
@@ -900,7 +900,7 @@ footer p {
         gap: 4px;
         width: 100%;
         flex: 1 0 100%;
-        overflow-x: auto;
+        overflow: visible;
         order: 3;
         margin-top: 4px;
     }
