@@ -416,6 +416,7 @@ main {
     border-radius: 2px;
 }
 
+
 .page-content p {
     font-size: 1.1em;
     line-height: 1.7;
@@ -423,6 +424,57 @@ main {
     color: #4a5568;
     position: relative;
     z-index: 10;
+}
+
+/* Contact Page Styles */
+.contact-info-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.submit-button {
+    background: #2d7d3f;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #1e5631;
 }
 
 .slideshow-container {
@@ -912,6 +964,11 @@ footer p {
         white-space: nowrap;
         flex-shrink: 0;
     }
+
+    .contact-info-section {
+        flex-direction: column;
+        gap: 10px;
+    }
     
     .slideshow-container {
         margin: 15px 5px;
@@ -1084,6 +1141,12 @@ footer p {
         flex-direction: column;
         gap: 12px;
         align-items: center;
+    }
+
+    .contact-info-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
     }
     
     .slideshow-container {
