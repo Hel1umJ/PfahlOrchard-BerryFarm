@@ -817,6 +817,25 @@ footer a:hover {
     background: linear-gradient(135deg, #2d7d3f 0%, #1e5631 100%);
 }
 
+.availability {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.availability.available {
+    background-color: #2d7d3f;
+}
+
+.availability.out-of-stock {
+    background-color: #c53030;
+}
+
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
