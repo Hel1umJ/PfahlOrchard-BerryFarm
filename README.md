@@ -1,8 +1,14 @@
-Business email & cloud sotrage: microsoft 365 basic plan
+Business email & cloud sotrage: microsoft 365
 
 Webhosting: GoDaddy & HostGator https://www.youtube.com/watch?v=BDdACdrs1vE OR AWS/google coud
 
 
+
+
+
+
+
+Webpage Body Text:
 
 Produce & Ripening dates:
     Apples: Our main crop, we currently have 6 acres of apple trees planned with over 300 trees already planted. We have a variety of apples planted, catered towards both eating and cider production
